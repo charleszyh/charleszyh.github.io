@@ -1,6 +1,7 @@
 /* Use Finlandica for headings */
+
 h1, h2, h3 {
-    font-family: 'Finlandica', sans-serif;
+    font-family: "Finlandica", sans-serif;
   }
   
   /* Use Finlandica for body text */
