@@ -13,6 +13,32 @@
 <body>
 <h1 class="welcome-header">Welcome to Charles Z's personal website :)</h1>
 
+<!-- A random quote area-->
+<div id="quote-section">
+  <p id="quote-text" class = "text"></p>
+</div>
+
+<script>
+  // Array of your favorite quotes
+  const quotes = [
+    "Yesterday is a history, tomorrow is a mystery, and today is a gift.",
+    "An unexamined life is not worth living.",
+    "Just do it."
+  ];
+
+  // Function to display a random quote
+  function displayRandomQuote() {
+    const today = new Date(); // Get the current date
+    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24)); // Day of the year
+    const quoteIndex = dayOfYear % quotes.length; // Use dayOfYear to pick a quote
+    const dailyQuote = quotes[quoteIndex]; // Select the quote for today
+    document.getElementById("quote-text").textContent = dailyQuote; // Display the quote
+  }
+
+  // Call the function when the page loads
+  window.onload = displayRandomQuote;
+</script>
+
 <div class="text">
   <p>My <a href="https://www.linkedin.com/in/yuanhang-charles-zhang/">LinkedIn</a> profile.</p>
 </div>
