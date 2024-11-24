@@ -95,7 +95,8 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+##
+s: https://hexo.io/themes/
 theme: pieces
 
 # Deployment

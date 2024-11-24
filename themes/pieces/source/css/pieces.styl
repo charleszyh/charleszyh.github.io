@@ -1,4 +1,4 @@
-
+// Website style area
 body
   margin 0
   font-family 'Finlandica', sans-serif
@@ -16,3 +16,44 @@ body
   text-align left
   margin-left 50px
   font-family 'Finlandica', sans-serif
+
+// Menu style area
+#menu-outer
+  padding 10px
+  border-bottom 1px solid #cccccc
+
+#menu-inner
+  display flex
+  justify-content space-between
+  align-items center
+  max-width 1000px
+  margin 0 auto
+
+#menu-inner a
+  text-decoration none
+  font-size 1rem
+  color #2a2a2a
+  margin-right 20px
+  transition all 0.3s
+
+#menu-inner a:hover
+  color #aa0719
+  text-shadow 0 3px 8px rgba(0, 0, 0, 0.2) // Add a subtle shadow on hover
+
+//Special font for the non-analytical menu
+.non-analytical-menu
+  font-family 'EB Garamond', serif
+  text-decoration none
+  font-size 1rem
+  margin-right 20px
+  transition color 0.3s
+
+@media (max-width: 768px)
+  #menu-inner
+    flex-direction column   // Stack items vertically on smaller screens
+    align-items flex-start  // Align items to the left
+    padding 10px            // Adjust padding for a smaller screen
+
+  #menu-inner a
+    margin 5px 0            // Add vertical spacing between links
+    font-size 1.2rem        // Increase font size for better readability

@@ -6,7 +6,7 @@ if (is_tag()) pageTitle = 'Tag: ' + page.tag;
 if (is_category()) pageTitle = 'Category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
+pageTitle += config.title;
 %>
 
 <!DOCTYPE html>
@@ -20,15 +20,18 @@ pageTitle += ' [ ' + config.title + ' ]';
       <link rel="stylesheet" href="<%=url%>">
     <% }); %>
   <% } %>
+
+  <!-- FAVICON  -->
+    <link rel="icon" href="https://em-content.zobj.net/source/apple/391/light-bulb_1f4a1.png">
 </head>
 <body>
 
 <div id="menu-outer">
-  <div id="menu-inner">
-    <% Object.keys(theme.menu).forEach(key => { %>
-      <a href="<%=theme.menu[key]%>"><%=key%></a>
-    <% }); %>
-  </div>
+    <div id="menu-inner">
+        <% Object.keys(theme.menu).forEach(key => { %>
+            <a href="<%= theme.menu[key] %>" class="<%= key.toLowerCase() %>-menu"><%= key %></a>
+        <% }); %>
+    </div>
 </div>
 
 <div id="content-outer">

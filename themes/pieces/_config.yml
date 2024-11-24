@@ -5,9 +5,10 @@ language: en
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Contact: /contact
+  Analytical: /analytical
+  Non-analytical: /non-analytical
   Archives: /archives
+  About me: /about-me
 
 # stylesheets loaded in the <head>
 stylesheets:
